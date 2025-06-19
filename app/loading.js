@@ -1,7 +1,9 @@
+import Spinner from "./_components/Spinner";
+
 export default function Loading(props) {
   return (
     <div>
-      <h1>LOADING DATA....</h1>
+      <Spinner />
     </div>
   );
 }
