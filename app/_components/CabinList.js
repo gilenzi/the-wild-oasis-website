@@ -1,9 +1,14 @@
-import { unstable_noStore as noStore } from "next/cache";
-import { getCabins } from "../_lib/data-service";
-import CabinCard from "./CabinCard";
+import {unstable_noStore as noStore} from 'next/cache';
+import {getCabins} from '../_lib/data-service';
+import CabinCard from './CabinCard';
+// import {useSearchParams} from 'next/navigation';
 
-async function CabinsList() {
+async function CabinsList(params) {
   // noStore();
+  // const searchParams = useSearchParams();
+  // const capacity = searchParams.get('capacity') || 'all';
+
+  console.log(params);
 
   const cabins = await getCabins();
   if (!cabins.length) return null;

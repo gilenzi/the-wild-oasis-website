@@ -1,19 +1,20 @@
-import CabinCard from "@/app/_components/CabinCard";
-import { getCabins } from "../_lib/data-service";
-import { Suspense } from "react";
-import CabinsList from "../_components/CabinList";
-import Spinner from "../_components/Spinner";
+import {Suspense} from 'react';
+import CabinsList from '../_components/CabinList';
+import Spinner from '../_components/Spinner';
+import Filter from '../_components/Filter';
 
 export const metadata = {
-  title: "Cabins",
+  title: 'Cabins',
 };
 
 export const revalidate = 3600;
 // export const revalidate = 30;
+export const dynamic = 'auto';
 
 export default function Page() {
   return (
     <div>
+      <Filter />
       <h1 className="text-4xl mb-5 text-accent-400 font-medium">
         Our Luxury Cabins
       </h1>
